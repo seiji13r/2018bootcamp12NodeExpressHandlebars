@@ -1,0 +1,33 @@
+{
+  "name": "2018bootcamp12nodeexpresshandlebars",
+  "version": "1.0.0",
+  "description": "A project showing NodeJS, Express, Handlebars, MySQL and Heroku in action.",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seiji13r/2018bootcamp12NodeExpressHandlebars.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "handlebars",
+    "mysql",
+    "heroku"
+  ],
+  "author": "Seiji Osada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seiji13r/2018bootcamp12NodeExpressHandlebars/issues"
+  },
+  "homepage": "https://github.com/seiji13r/2018bootcamp12NodeExpressHandlebars#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0",
+    "path": "^0.12.7"
+  }
+}
