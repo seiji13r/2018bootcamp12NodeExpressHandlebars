@@ -52,6 +52,15 @@ seiji-eat-da-burger
             * insertOne()
             * updateOne()
         * Export the ORM object in module.exports.
-  
+* Create the `models` directory and inside it:
+    * Create the `burger.js` file with:
+        * A require statement for the `orm.js`.
+        * Methods that use the ORM functionality to manipulate the burgers.
+        * Export the Burger object in `module.exports`.
+* Create the `controllers` directory and inside it:
+    * Create burgers_controller.js file with:
+        * Require Statements of `Express` and `burger.js`.
+        * A Router with the routes that perform the required actions that interact with the views.
+        * Export the Router object.
 
 # Development Notes
