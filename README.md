@@ -2,6 +2,7 @@
 
 - [Overview](#overview)
     - [Web App Usage](#web-app-usage)
+    - [Deployed App](#deployed-app)
 - [Development Process](#development-process)
 - [Development Notes](#development-notes)
 
@@ -18,10 +19,9 @@ NodeJS, Express, Handlebars, MySQL and Heroku in action.
 * Once a burger is `Devoured` this will be piled up in the right side of the window.
 * All the Burgers will be stored in the database.
 
+## Deployed App
 
-Eat-Da-Burger
-
-seiji-eat-da-burger
+[Eat-Da-Burger](https://seiji-eat-da-burger.herokuapp.com/)
 
 # Development Process
 
@@ -62,5 +62,7 @@ seiji-eat-da-burger
         * Require Statements of `Express` and `burger.js`.
         * A Router with the routes that perform the required actions that interact with the views.
         * Export the Router object.
-
+* Create the `public` directory and inside it:
+* Create the `views` directory and inside it:
+    
 # Development Notes
