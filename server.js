@@ -14,11 +14,15 @@ app.use(express.json());
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// Important: As the views directory is inside app directory it is important so specify the reference paths.
+// layoutsDir: "app/views/layouts"
+// app.set('views', "app/views");
+app.engine("handlebars", exphbs({ layoutsDir: "app/views/layouts", defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+app.set('views', "app/views");
 
 // Import routes and give the server access to them.
-var routes = require("./app/controllers/catsController.js");
+var routes = require("./app/controllers/burgers_controller.js");
 
 app.use(routes);
 
