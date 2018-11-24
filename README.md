@@ -5,6 +5,12 @@
     - [Deployed App](#deployed-app)
 - [Development Process](#development-process)
 - [Development Notes](#development-notes)
+    - [ORM Function Signatures](#orm-function-signatures)
+        - [Select All](#select-all)
+        - [Insert One](#insert-one)
+        - [Update One](#update-one)
+        - [Delete One](#delete-one)
+- [MVC Modules Relationships](#mvc-modules-relationships)
 
 # Overview
 
@@ -66,3 +72,63 @@ NodeJS, Express, Handlebars, MySQL and Heroku in action.
 * Create the `views` directory and inside it:
     
 # Development Notes
+## ORM Function Signatures
+### Select All
+
+```javascript
+orm.slectAll(tableInput, cb)
+```
+**tableInput:** *String* "Name of the Table"
+**cb:** *function* "Callback Function"
+
+### Insert One
+
+```javascript
+orm.insertOne(table, cols, vals, cb)
+```
+**table:** *String* "Name of the Table"
+**cols:** *Array* "Column Names"
+**vals:** *Array* "Values of the Fields"
+**cb:** *function* "Callback Function"
+
+### Update One
+
+```javascript
+orm.updateOne(table, objColVals, condition, cb)
+```
+**table:** *String* "Name of the Table"
+**objColVals:** *Object* "// An example of objColVals would be {burger_name: TinyMc, devoured: true}"
+**condition:** ** Example of Condition `"id = " + req.params.id`
+**cb:** *function* "Callback Function"
+
+### Delete One
+
+```javascript
+orm.deleteOne(table, id, cb)
+```
+**table:** *String* "Name of the Table"
+**id:** *Integer* "id"
+**cb:** *function* "Callback Function"
+
+# MVC Modules Relationships
+
+```console
+server.js
+^   ^
+^   express = app <<<<<<<< app.use(routes)
+^                                    ^
+controllers.burgers_controllers.js = router
+^   ^   ^
+^   ^   express.Router()
+^   ^
+^   views.index > views.layouts.main < public.assets
+^   ^
+^   views.partials.burger.burger-block
+^
+^
+models.burger.js
+^
+config.orm.js
+^
+config.connection.js
+```
