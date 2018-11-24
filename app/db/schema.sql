@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS burger_db;
-CREATE DATABASE burger_db;
-USE burger_db;
+-- DROP DATABASE IF EXISTS burger_db;
+-- CREATE DATABASE burger_db;
+-- USE burger_db;
 
 CREATE TABLE burger(
     id INT NOT NULL AUTO_INCREMENT,
@@ -9,4 +9,4 @@ CREATE TABLE burger(
     PRIMARY KEY(id)
 );
 
-SELECT * FROM burger_db.burger;
+SELECT * FROM burger;
