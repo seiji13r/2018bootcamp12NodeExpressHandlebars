@@ -15,9 +15,10 @@ app.use(express.json());
 var exphbs = require("express-handlebars");
 
 // Important: As the views directory is inside app directory it is important so specify the reference paths.
+// partialsDir: "app/views/partials"
 // layoutsDir: "app/views/layouts"
 // app.set('views', "app/views");
-app.engine("handlebars", exphbs({ layoutsDir: "app/views/layouts", defaultLayout: "main" }));
+app.engine("handlebars", exphbs({ layoutsDir: "app/views/layouts", partialsDir: "app/views/partials", defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.set('views', "app/views");
 

@@ -1,25 +1,26 @@
 <h1>Eat-Da-Burger!</h1>
 
 <h2>Burguers to Devour!</h2>
-{{!-- 
+
 <ul>
   {{#each burgers}}
+  {{burger_name}} {{devoured}}
     {{#unless devoured}}
-      {{> burger/burger-block devoured=true}}
+      {{> burger/burger-block devoured=false}}
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Cats that are sleepy!</h2>
+<h2>Burguers Devoured!</h2>
 
 <ul>
   {{#each burgers}}
     {{#if devoured}}
-      {{> burger/burger-block devoured=false}}
+      {{> burger/burger-block devoured=true}}
     {{/if}}
   {{/each}}
 </ul>
-
+{{!-- 
 <h2>Add a Cat</h2>
 <form class="create-form">
 
