@@ -1,8 +1,24 @@
-<li>
-	{{burger_name}}
 
-	<button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
-		{{#if devoured}}TO THE TABLE!{{else}}LET'S EAT!{{/if}}
-	</button>
-	<button class="delete-burger" data-id="{{id}}">DELETE BURGER</button>
-</li>
+<div class="row burger-item">
+  <div class="col-sm-12 col-md-4">
+    {{burger_name}}
+  </div>
+
+  <div class="col-sm-12 col-md-8 text-center">
+    {{#if devoured}}
+    <button class="btn btn-sm btn-primary clone-burger" data-id="{{id}}" data-newdevoured="{{devoured}}">
+      <small>
+        <i class="far fa-clone"></i> CLONE
+      </small>
+    </button>
+    {{else}}
+    <button class="btn btn-sm btn-primary eat-burger" data-id="{{id}}" data-newdevoured="{{devoured}}">
+      <small>
+        <i class="fas fa-cookie-bite"> EAT</i>
+      </small>
+    </button>
+    {{/if}}
+    <button class="btn btn-sm btn-danger delete-burger" data-id="{{id}}"><span aria-hidden="true">&times;</span></button>
+  </div>
+
+</div>

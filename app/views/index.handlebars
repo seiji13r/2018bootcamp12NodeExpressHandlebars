@@ -1,25 +1,62 @@
+
+<div class="jumbotron main-jumbotron">
 <h1>Eat-Da-Burger!</h1>
+<img src="assets/img/burger.png" alt="Burger Cartoon">
+</div>
 
-<h2>Burguers to Devour!</h2>
+<main class="container">
+  <div class="row">
+    <div class="col-12 col-md-4 order-md-2 text-center">
+      <h5 class="text-center">
+      Order Here!!!
+      </h5>
+      <form action="">
+        <div class="form-group">
+          {{!-- <label for="new-burger-input">New Burger Name</label> --}}
+          <input type="email" class="form-control" id="new-burger-input" aria-describedby="newBurger" placeholder="Enter Burger Name">
+          <small id="burgerHelp" class="form-text text-light">Enter Some Super Delicious Burger Name</small>
+          <br>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </form>
+      <br>
+    </div>
 
-<ul>
-  {{#each burgers}}
-  {{burger_name}} {{devoured}}
-    {{#unless devoured}}
-      {{> burger/burger-block devoured=false}}
-    {{/unless}}
-  {{/each}}
-</ul>
+    <div class="col-6 col-md-4 order-md-1">
 
-<h2>Burguers Devoured!</h2>
+      <h5 class="text-center">
+      Not Devoured
+      </h5>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burger/burger-block devoured=true}}
-    {{/if}}
-  {{/each}}
-</ul>
+      <div class="container">
+      </div>
+        {{#each burgers}}
+          {{#unless devoured}}
+            {{> burger/burger-block devoured=false}}
+          {{/unless}}
+        {{/each}}
+
+    </div>
+
+    <div class="col-6 col-md-4 order-md-3">
+
+      <h5 class="text-center">
+      Devoured
+      </h5>
+
+      <div class="container">
+      </div>
+        {{#each burgers}}
+          {{#if devoured}}
+            {{> burger/burger-block devoured=true}}
+          {{/if}}
+        {{/each}}
+    </div>
+
+  </div>
+
+</main>
+
 {{!-- 
 <h2>Add a Cat</h2>
 <form class="create-form">
