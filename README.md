@@ -10,6 +10,11 @@
         - [Insert One](#insert-one)
         - [Update One](#update-one)
         - [Delete One](#delete-one)
+    - [Model Function Signatures](#model-function-signatures)
+        - [All](#all)
+        - [Create](#create)
+        - [Update](#update)
+        - [Delete](#delete)
 - [MVC Modules Relationships](#mvc-modules-relationships)
 
 # Overview
@@ -69,7 +74,22 @@ NodeJS, Express, Handlebars, MySQL and Heroku in action.
         * A Router with the routes that perform the required actions that interact with the views.
         * Export the Router object.
 * Create the `public` directory and inside it:
+    * Create the `css` directory with:
+        * `style.css` file for custom styles.
+    * Create the `img` directory.
+        * Include the required images.
+    * Create the `js` directory.
+        * Create the `burgers_frontend` file, this will contain all front end javascript functionality.
 * Create the `views` directory and inside it:
+    * Create the `index.handlebars` file.
+    * Create the `layouts` directory with:
+        * The `main.handlebars` file.
+    * Create the `partials` directory with:
+        * The `burger-block.handlebars` file.
+* Complete the ORM and Model functionality.
+* Build the Routes in the controller and use the Model methods.
+* Populate the information in the Front end.
+* Iterate over the code into `index.handlebar`, `frontend.js` and the `controller.js` to finish up the required application functionalities.
     
 # Development Notes
 ## ORM Function Signatures
@@ -78,7 +98,7 @@ NodeJS, Express, Handlebars, MySQL and Heroku in action.
 ```javascript
 orm.slectAll(tableInput, cb)
 ```
-**tableInput:** *String* "Name of the Table"
+**tableInput:** *String* "Name of the Table" \
 **cb:** *function* "Callback Function"
 
 ### Insert One
@@ -86,9 +106,9 @@ orm.slectAll(tableInput, cb)
 ```javascript
 orm.insertOne(table, cols, vals, cb)
 ```
-**table:** *String* "Name of the Table"
-**cols:** *Array* "Column Names"
-**vals:** *Array* "Values of the Fields"
+**table:** *String* "Name of the Table" \
+**cols:** *Array* "Column Names" \
+**vals:** *Array* "Values of the Fields" \
 **cb:** *function* "Callback Function"
 
 ### Update One
@@ -96,9 +116,9 @@ orm.insertOne(table, cols, vals, cb)
 ```javascript
 orm.updateOne(table, objColVals, condition, cb)
 ```
-**table:** *String* "Name of the Table"
-**objColVals:** *Object* "// An example of objColVals would be {burger_name: TinyMc, devoured: true}"
-**condition:** ** Example of Condition `"id = " + req.params.id`
+**table:** *String* "Name of the Table" \
+**objColVals:** *Object* "// An example of objColVals would be {burger_name: TinyMc, devoured: true}" \
+**condition:** ** Example of Condition `"id = " + req.params.id` \
 **cb:** *function* "Callback Function"
 
 ### Delete One
@@ -106,8 +126,44 @@ orm.updateOne(table, objColVals, condition, cb)
 ```javascript
 orm.deleteOne(table, id, cb)
 ```
-**table:** *String* "Name of the Table"
-**id:** *Integer* "id"
+**table:** *String* "Name of the Table" \
+**id:** *Integer* "id" \
+**cb:** *function* "Callback Function"
+
+
+## Model Function Signatures
+### All
+
+```javascript
+burger.all(cb)
+```
+**cb:** *function* "Callback Function"
+
+### Create
+
+```javascript
+burger.create(cols, vals, cb)
+```
+**cols:** *Array* "Column Names" \
+**vals:** *Array* "Values of the Fields" \
+**cb:** *function* "Callback Function"
+
+### Update
+
+```javascript
+burger.update(objColVals, condition, cb)
+```
+**objColVals:** *Object* "// An example of objColVals would be {burger_name: TinyMc, devoured: true}" \
+**condition:** ** Example of Condition `"id = " + req.params.id` \
+**cb:** *function* "Callback Function"
+
+### Delete
+
+```javascript
+burger.delete(id, cb)
+```
+**table:** *String* "Name of the Table" \
+**id:** *Integer* "id" \
 **cb:** *function* "Callback Function"
 
 # MVC Modules Relationships
