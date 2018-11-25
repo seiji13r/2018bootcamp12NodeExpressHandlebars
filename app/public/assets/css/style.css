@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Montserrat');
+
+/* 
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Montserrat', sans-serif;
+*/
+
 body{
   margin-top: 40px;
   background-color: #C3231B;
   color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .main-jumbotron{
@@ -9,16 +17,18 @@ body{
   background-color: white;
   color: black;
   text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 .main-jumbotron img{
   width: 150px;
+  border-radius: 35%; 
 }
 
 .main-jumbotron h1{
   padding: 10px;
   color: #C30000;
-  text-shadow: 2px 2px rgb(95, 29, 26);
+  text-shadow: 2px 3px rgb(95, 29, 26);
 }
 
 .burger-item{
@@ -27,28 +37,6 @@ body{
   padding: 3px 0;
   margin: 5px auto;
 }
-
-/* 
-li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
-}
-
-.label {
-  font-weight: bold;
-}
-
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
-}
-
-.form-group {
-  margin-bottom: 5px;
-} */
-
 
 @media (min-width: 576px){
   .main-jumbotron img{
